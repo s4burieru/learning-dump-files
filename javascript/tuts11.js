@@ -11,7 +11,7 @@ let ave = 0;
 for (let i in grado) {
   console.log(`${i}: ${grado[i]}`);
   ave += grado[i];
-};
+}
 
 ave /= Object.keys(grado).length;
 console.log(`Averege: ${ave}`);

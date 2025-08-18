@@ -5,7 +5,7 @@ function addition(arrNum) {
   }
   return sum;
 }
-let total = addition([5,5,5,5]);
+let total = addition([5, 5, 5, 5]);
 console.log(total);
 
 // Functions

@@ -10,10 +10,8 @@ if (grade >= 101) {
   console.log("With honor");
 } else if (grade >= 75) {
   console.log("Passed");
-} else
-  console.log("Failed");
+} else console.log("Failed");
 
 console.log("thankyou");
 
 //bawal nasa gitna ng if at else if ang else
-    

@@ -20,6 +20,6 @@ let p = document.querySelector("p");
 p.innerHTML =
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae quis, quasi ducimus magnam asperiores ab suscipit rerum sint illo, et rem architecto fugiat! Magnam, aliquam. Libero obcaecati ex facilis distinctio";
 p.style.color = "White";
-p.style.fontFamily = "Arial";
+p.style.fontFamily = "Roboto";
 p.style.fontSize = "19px";
 p.style.textAlign = "Center";

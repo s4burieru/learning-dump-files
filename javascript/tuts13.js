@@ -12,7 +12,7 @@ img.src = "20250810_154307.jpg";
 img.style.width = "150px";
 
 let h1 = document.querySelector("h1");
-h1.innerHTML = "Sbriel Adriel";
+h1.innerHTML = "Sabriel Adriel";
 h1.style.color = "White";
 h1.style.fontFamily = "Arial";
 

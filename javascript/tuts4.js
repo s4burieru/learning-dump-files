@@ -8,3 +8,5 @@ console.log(`Id: ${id}`);
 console.log(`First Name: ${firstname[id]}`);
 console.log(`Last Name: ${lastname[id]}`);
 console.log(`Age: ${age[id]}`);
+
+// Concatenate - process of joining two or more strings

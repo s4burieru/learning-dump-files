@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+    <button
+      onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    "
+    >
+      Show Quantity
+    </button>
+
+    <button
+      onclick="
+    cartQuantity ++; //Increment by 1, variable re-assignment
+        console.log(`Cart Quantity: ${cartQuantity}`);
+    "
+    >
+      Add to Cart
+    </button>
+
+    <button
+      onclick="cartQuantity += 2; //variable re-assignment
+         console.log(`Cart Quantity: ${cartQuantity}`);
+    "
+    >
+      +2
+    </button>
+
+    <button
+      onclick="cartQuantity += 3; //variable re-assignment
+         console.log(`Cart Quantity: ${cartQuantity}`);
+    "
+    >
+      +3
+    </button>
+
+    <button
+      onclick="cartQuantity = 0;
+        console.log('Cart was Reset.');
+        console.log(`Cart Quantity: ${cartQuantity}`);" 
+    >
+      Reset Cart
+    </button>
+
+    <script>
+      let cartQuantity = 0; //Standard naming convention for variables in javascript is camelCase. It can be PascalCase sometimes depending on usage.
+                            //let is a keyword that declares a variable that can be re-assigned later.
+                            //Const is another keyword that declares a variable that cannot be re-assigned later.
+                            //Best practice is to use const unless you need to re-assign the variable later, then use let.
+
+    </script>
+  </body>
+</html>

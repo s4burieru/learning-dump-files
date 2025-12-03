@@ -10,82 +10,88 @@
 
     <button
       onclick="
-    const randomNumber = Math.random();
-    let computerMove = ''
-    if (randomNumber >= 0 && randomNumber < 1/3) {
-        computerMove = 'Rock'
-    } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-        computerMove = 'Paper'
-    } else if (randomNumber >= 2/3 && randomNumber < 3/3) {
-        computerMove = 'Scissors'
-    }
-
-    let Result = ''
-    if (computerMove === 'Rock') {
-    Result = 'Tie'
-    } else if (computerMove === 'Paper') {
-    Result = 'You loose.'
-    } else if (computerMove === 'Scissors') {
-    Result = 'You win'
-    }
-
-    alert(`You picked Rock. Computer picked ${computerMove}. ${Result}`);
-    "
+    playGame('Rock');
+          "
     >
       Rock
     </button>
 
     <button
       onclick="
-    const randomNumber1 = Math.random();
-    let computerMove1 = ''
-    if (randomNumber1 >= 0 && randomNumber1 < 1/3) {
-        computerMove1 = 'Rock'
-    } else if (randomNumber1 >= 1/3 && randomNumber1 < 2/3) {
-        computerMove1 = 'Paper'
-    } else if (randomNumber1 >= 2/3 && randomNumber1 < 3/3) {
-        computerMove1 = 'Scissors'
-    }
-
-    let Result1 = ''
-    if (computerMove1 === 'Paper') {
-    Result1 = 'Tie'
-    } else if (computerMove1 === 'Scissors') {
-    Result1 = 'You loose.'
-    } else if (computerMove1 === 'Rock') {
-    Result1 = 'You win'
-    }
-    alert(`You picked Paper. Computer picked ${computerMove1}. ${Result1}`);
-    "
+    playGame('Paper');
+          "
     >
       Paper
     </button>
 
     <button
       onclick="
-    const randomNumber2 = Math.random();
-    let computerMove2 = ''
-    if (randomNumber2 >= 0 && randomNumber2 < 1/3) {
-        computerMove2 = 'Rock'
-    } else if (randomNumber2 >= 1/3 && randomNumber2 < 2/3) {
-        computerMove2 = 'Paper'
-    } else if (randomNumber2 >= 2/3 && randomNumber2 < 3/3) {
-        computerMove2 = 'Scissors'
-    }
-
-    let Result2 = ''
-    if (computerMove2 === 'Paper') {
-    Result2 = 'Tie'
-    } else if (computerMove2 === 'Scissors') {
-    Result2 = 'You loose.'
-    } else if (computerMove2 === 'Rock') {
-    Result2 = 'You win'
-    }
-    alert(`You picked Scissors. Computer picked ${computerMove2}. ${Result2}`);
-    " 
-    >Scissors</button>
+      playGame('Scissors');
+      "
+    >
+      Scissors
+    </button>
 
     <script>
+      function playGame(playerMove) {
+        const computerMove = pickComputerMove();
+        let Result = "";
+        if (playerMove === "Scissors") {
+          if (computerMove === "Scissors") {
+            Result = "Tie";
+          } else if (computerMove === "Rock") {
+            Result = "You loose.";
+          } else if (computerMove === "Paper") {
+            Result = "You win";
+          }
+          alert(
+            `You picked ${playerMove}. Computer picked ${computerMove}. ${Result}`
+          );
+
+        } else if (playerMove === "Paper") {
+          const computerMove = pickComputerMove();
+          let Result = "";
+          if (computerMove === "Paper") {
+            Result = "Tie";
+          } else if (computerMove === "Scissors") {
+            Result = "You loose.";
+          } else if (computerMove === "Rock") {
+            Result = "You win";
+          }
+          alert(
+            `You picked ${playerMove}. Computer picked ${computerMove}. ${Result}`
+          );
+          
+        } else if (playerMove === "Rock") {
+          const computerMove = pickComputerMove();
+          let Result = "";
+          if (computerMove === "Rock") {
+            Result = "Tie";
+          } else if (computerMove === "Paper") {
+            Result = "You loose.";
+          } else if (computerMove === "Scissors") {
+            Result = "You win";
+          }
+          alert(
+            `You picked ${playerMove}. Computer picked ${computerMove}. ${Result}`
+          );
+        }
+      }
+
+      function pickComputerMove() {
+        const randomNumber = Math.random();
+        let computerMove = "";
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          computerMove = "Rock";
+        } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          computerMove = "Paper";
+        } else if (randomNumber >= 2 / 3 && randomNumber < 3 / 3) {
+          computerMove = "Scissors";
+        }
+
+        return computerMove;
+      }
+
       /* 
          Strategy for javascript is:
          1. Figure out the steps we need

@@ -32,7 +32,16 @@
       Scissors
     </button>
 
+    <button>Reset Score</button>
+
     <script>
+
+      const score = {
+        wins: 0,
+        losses: 0,
+        ties: 0
+      };
+
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
         let Result = "";
@@ -40,12 +49,22 @@
           if (computerMove === "Scissors") {
             Result = "Tie";
           } else if (computerMove === "Rock") {
-            Result = "You loose.";
+            Result = "You loss";
           } else if (computerMove === "Paper") {
             Result = "You win";
           }
+
+          if (Result === "You win") {
+            score.wins += 1;
+          } else if (Result === "You loss") {
+            score.losses += 1;
+          } else if (Result === "Tie") {
+            score.ties += 1;
+          }
+
           alert(
-            `You picked ${playerMove}. Computer picked ${computerMove}. ${Result}`
+            `You picked ${playerMove}. Computer picked ${computerMove}. ${Result}
+             Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
           );
 
         } else if (playerMove === "Paper") {
@@ -54,12 +73,22 @@
           if (computerMove === "Paper") {
             Result = "Tie";
           } else if (computerMove === "Scissors") {
-            Result = "You loose.";
+            Result = "You loss";
           } else if (computerMove === "Rock") {
             Result = "You win";
           }
+
+          if (Result === "You win") {
+            score.wins += 1;
+          } else if (Result === "You loss") {
+            score.losses += 1;
+          } else if (Result === "Tie") {
+            score.ties += 1;
+          }
+
           alert(
-            `You picked ${playerMove}. Computer picked ${computerMove}. ${Result}`
+            `You picked ${playerMove}. Computer picked ${computerMove}. ${Result} 
+             Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
           );
           
         } else if (playerMove === "Rock") {
@@ -68,12 +97,22 @@
           if (computerMove === "Rock") {
             Result = "Tie";
           } else if (computerMove === "Paper") {
-            Result = "You loose.";
+            Result = "You loss.";
           } else if (computerMove === "Scissors") {
             Result = "You win";
           }
+
+          if (Result === "You win") {
+            score.wins += 1;
+          } else if (Result === "You loss") {
+            score.losses += 1;
+          } else if (Result === "Tie") {
+            score.ties += 1;
+          }
+
           alert(
-            `You picked ${playerMove}. Computer picked ${computerMove}. ${Result}`
+            `You picked ${playerMove}. Computer picked ${computerMove}. ${Result} 
+             Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
           );
         }
       }
@@ -96,6 +135,11 @@
          Strategy for javascript is:
          1. Figure out the steps we need
          2. Convert the steps into code
+
+
+
+        function (parameter)
+
         */
     </script>
   </body>
